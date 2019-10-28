@@ -14,3 +14,10 @@ the next step of this is to use a bounding rectangle to only select the desired 
 in the latest commits of naphta/tesseract.js they added real-time video recognition, so this could make this app redundant.
 
 huge thanks to https://github.com/naptha/tesseract.js for making it so easy to implement
+
+### Installation
+- Go to: chrome://extensions/
+- Activate developper mode
+- Click on LOAD UNPACKED
+- Go to the cloned repository
+- click SELECT
