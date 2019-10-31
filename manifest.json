@@ -10,6 +10,7 @@
     "js": ["./assets/script/jquery.min.js",
            "./assets/script/html2canvas.min.js",
            "./assets/script/tesseract.min.js",
+           "boundrect.js",
            "content.js"]
   }
 ]
