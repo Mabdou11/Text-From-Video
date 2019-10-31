@@ -17,7 +17,7 @@ huge thanks to https://github.com/naptha/tesseract.js for making it so easy to i
 #### How to Use:
  - You can select a portion of the video to recognize it. (it does not let you select the entire video, some scaling problems maybe)
  - hit Alt + Ctrl you will get some progress info on the side of the cursor
- - if page is new, and yout directly hit Alt + Ctrl, it will read the entire frame.
+ - if page is new, and you directly hit Alt + Ctrl, it will read the entire frame.
 
 ### Installation
 - Go to: chrome://extensions/
