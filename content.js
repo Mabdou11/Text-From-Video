@@ -9,16 +9,6 @@ const copyToClipboard = str => {
   document.execCommand('copy');
   document.body.removeChild(el);
 };
-document.addEventListener('DOMContentLoaded', () => {
-    'use strict';
-document.addEventListener("keydown", function(evt){
-	if(evt.altKey && evt.shiftKey){
-		$(document).ready(function(){
-			alert("yoohoo!");
-		});
-	}
-});
-});
 
 function coldStart(){
 	//pre execute tesseract on a small blank image:
@@ -62,7 +52,6 @@ if($("video").position()){
 		    ctx.drawImage(video, X, Y, W, H, 0, 0, canvas.width, canvas.height);
 		    var base64ImageData = canvas.toDataURL('image/png');
 
-//		    $('#capture').attr('src',base64ImageData);
 
 			Tesseract.recognize(base64ImageData).progress((progress)=>{
 				
@@ -88,10 +77,12 @@ if($("video").position()){
 						}else $('#result').text('There you go!');
 					}
 				}
-		
+
 		 	}).then((result)=>{
 		 		$('body').children('#result').text(result.text);
 		 		copyToClipboard(result.text);
+		 	//	$('#result').append('<img src="'+base64ImageData+'"/>');
+
 		 		setTimeout(function(){
 		 		$('#result').remove();
 		 		},2000);

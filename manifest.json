@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
   "name": "Youtube OCR",
-  "version": "0.1",
+  "version": "0.2",
   "content_scripts": [
   {
     "matches": [
-      "<all_urls>"
+    "<all_urls>"
       ],  
     "js": ["./assets/script/jquery.min.js",
            "./assets/script/html2canvas.min.js",

@@ -1,20 +1,20 @@
-
+if(document.querySelector('video')){
 var canvas = document.createElement("canvas");
 canvas.setAttribute("id", "myCanvas");
 
+// this right here should be fixed
+// for the youtube videos to work properly
 
-$(document).ready(function(){
-
-});
 
 document.body.appendChild(canvas);
 var ctx = canvas.getContext("2d");
 var mdX,mdY,mvX,mvY; // mouse coordinates
 var started = false;
+var selected = false;
 var scale;
 
 function bound(){
-
+	// returns a scalled values
 	var x = (mdX+mvX);
 	var y = (mdY+mvY);
 	return{
@@ -25,22 +25,27 @@ function bound(){
 	};
 }
 
+function getOffset( el ) {
+var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { 
+    	top: rect.top + scrollTop, left: rect.left + scrollLeft 
+    }
+}
 
 $(document).ready(function(){
+
+
 	function pos(){
-		if($("video").position(){
+			var theVid;
+			var offset = getOffset(document.querySelector('video'));
 			return {
-				top:$("video").position().top,
-				left:$("video").position().left,
-				right:$("video").position().right
-			}	
-		}else{
-			return {
-				top:-9999,
-				left:-9999,
-				right:-99999
-			}
-		}
+				top:offset.top,
+				left:offset.left,
+				height:$("video").height(),
+				width:$("video").height(),
+		}	
 	}
 
 	var video = document.querySelector('video');
@@ -50,20 +55,25 @@ $(document).ready(function(){
 	scale = ()=> {
 		return video.videoHeight/$("video").height();
 	}
-
-	$("#myCanvas").css({
-		position: 'absolute',
-		'z-index': -1,
-		top: pos().top+'px',
-		left: pos().left+'px',
-	});
-	$("#myCanvas").attr("height", height);
-	$("#myCanvas").attr("width", width);
-
+function initCanvas(){
+	if($('video').position()){
+		$("#myCanvas").css({
+			position: 'absolute',
+			'z-index': -1,
+			top: pos().top+'px',
+			left: pos().left+'px',
+			height:height,
+			width: width
+		});
+		$("#myCanvas").attr("height", height);
+		$("#myCanvas").attr("width", width);			
+	}
+}
+		initCanvas();
 
 	let click = e =>{
 		if(!started){
-
+				initCanvas();
 				mdX = e.pageX - pos().left;
 				mdY = e.pageY - pos().top;
 				started = true;
@@ -102,3 +112,4 @@ $(document).ready(function(){
 	});
 
 });
+}
