@@ -1,6 +1,6 @@
 if(document.querySelector('video')){
 var canvas = document.createElement("canvas");
-canvas.setAttribute("id", "myCanvas");
+canvas.setAttribute("id", "selectionCanvas");
 
 // this right here should be fixed
 // for the youtube videos to work properly
@@ -36,7 +36,6 @@ var rect = el.getBoundingClientRect(),
 
 $(document).ready(function(){
 
-
 	function pos(){
 			var theVid;
 			var offset = getOffset(document.querySelector('video'));
@@ -57,7 +56,7 @@ $(document).ready(function(){
 	}
 function initCanvas(){
 	if($('video').position()){
-		$("#myCanvas").css({
+		$("#selectionCanvas").css({
 			position: 'absolute',
 			'z-index': -1,
 			top: pos().top+'px',
@@ -65,8 +64,8 @@ function initCanvas(){
 			height:height,
 			width: width
 		});
-		$("#myCanvas").attr("height", height);
-		$("#myCanvas").attr("width", width);			
+		$("#selectionCanvas").attr("height", height);
+		$("#selectionCanvas").attr("width", width);			
 	}
 }
 		initCanvas();
@@ -83,7 +82,7 @@ function initCanvas(){
 
 	let move = e =>{
 			if(started){
-				$("#myCanvas").css({
+				$("#selectionCanvas").css({
 					'z-index': 990
 				});
 
@@ -104,7 +103,7 @@ function initCanvas(){
 	document.addEventListener("mousedown",click);
 	document.addEventListener("mousemove",move);
 	document.addEventListener("mouseup", () =>{
-		$("#myCanvas").css({
+		$("#selectionCanvas").css({
 			'z-index': -1
 		});
 		started = false;

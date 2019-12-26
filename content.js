@@ -93,6 +93,12 @@ if($("video").position()){
 	//	});
 	}
 	});
+}else{
+	// did not fix the problem
+	// todo: canvas should not 
+	if(!$("#selectionCanvas").length){
+		$("#selectionCanvas").remove();
+	}
 }
 });
 
