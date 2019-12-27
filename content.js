@@ -18,7 +18,6 @@ function coldStart(){
 		Tesseract.recognize(blank10x10).progress((progress)=>{console.log("init Tesseract")}).then(()=>{console.log("init Complete")});
 	}
 
-bound();
 
 $(document).ready(function(){
 		// instant.page == preload a page faster.
