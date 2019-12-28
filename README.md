@@ -19,7 +19,7 @@ It's recommended to use the highest resolution possible for now.
 
 ![Select text area](./p1.gif)
 #### Alt+Ctrl
-![Paste recognized text](./p1.gif)
+![Paste recognized text](./p2.gif)
 
 ### Installation
 - Go to: chrome://extensions/
