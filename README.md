@@ -17,6 +17,10 @@ It's recommended to use the highest resolution possible for now.
  - It should to automatically copied to the clipboard (do it again if it is not).
  - Hit directly Alt + Ctrl on a freshly loaded page to recognize the entire video frame (takes time, not recommended).
 
+![Select text area](./p1.gif)
+#### Alt+Ctrl
+![Paste recognized text](./p1.gif)
+
 ### Installation
 - Go to: chrome://extensions/
 - Activate developper mode
