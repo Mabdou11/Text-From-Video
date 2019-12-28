@@ -20,6 +20,7 @@ It's recommended to use the highest resolution possible for now.
 ![Select text area](./p1.gif)
 #### Alt+Ctrl
 ![Paste recognized text](./p2.gif)
+###### Figure 1 video "Three Runners Puzzle" is from YouTube channel: MindYourDecisions.
 
 ### Installation
 - Go to: chrome://extensions/
