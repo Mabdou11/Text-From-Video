@@ -1,7 +1,19 @@
-# Youtube-OCR
-This is a chrome extension, that uses Tesseract.js to recognize text from video.
+# Text Recognition from Web Videos
+A chrome extension to recognize text from a video using Tesseract.js.
+This is mainly focused on ![YouTube](https://www.youtube.com/) videos
 
-The recognized text is automatically copied to clipboard
+In theory, it should work on any webpage that contains a <video> tag.
+ 
+ 
+ #### Some problems:
+- When the page does not contain the video tag initially, the canvas is not created afterwards.
+ > **Solution**: Open videos on a new tab, or simply refresh it.
+- When the video tag is removed from the webpage, the canvas does not disappear.
+ > **Solution**: refresh the page, or try opening it in a new tab.
+ 
+  
+The recognized text should be automatically copied to clipboard
+>If that doesn't work, simply try it again, I ignore why it fails sometimes.
 
 For now, it is not trained on any additional data
 If it's clear and a wellknown font, it would recognize it without problems
@@ -32,12 +44,15 @@ Figure 1 video: [_Three Runners Puzzle_](https://www.youtube.com/watch?v=C6emQS1
 
 
 #### some problems:
-    When video is not opened in a new tab, or is not refreshed, it does not load the app, that is because there is no video in the main page, and the extention does not refrech if you access a link from the same tab.
-    You either have to open in a new tab, or just refresh it.
-    Similarly, if you get back to main youtube page from a video page, the app would still continue to run. (same cause, same solution).
-    
+  - When video is not opened in a new tab, or is not refreshed, it does not load the app, that is because there is no video in the main page, and the extention does not refrech if you access a link from the same tab.
+  You either have to open in a new tab, or just refresh it.
+   Similarly, if you get back to main youtube page from a video page, the app would still continue to run. (same cause, same solution). 
+   
+  - It does not fully work on fullscreen, or when you Enable/Disable Theater mode on YouTube without refreshing the page.
+  
 ##### Next step:
-    - dynamically change the canvas size according to the video (now, you refrech)
+    - Fix those problems
+    - dynamically change the canvas size according to the video without refreshing
     - train the model on more fonts and styles
     
 This project is using tesseract.js version from https://github.com/naptha/tesseract.js
