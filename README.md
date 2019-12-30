@@ -1,6 +1,6 @@
 # Text Recognition from Web Videos
 A chrome extension to recognize text from a video using Tesseract.js.
-This is mainly focused on ![YouTube](https://www.youtube.com/) videos
+This is mainly focused on [YouTube](https://www.youtube.com/) videos
 
 In theory, it should work on any webpage that contains a <video> tag.
  
