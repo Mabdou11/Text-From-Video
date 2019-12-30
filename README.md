@@ -7,7 +7,7 @@ In theory, it should work on any webpage that contains a <video> tag.
  
  #### Some problems:
 - When the page does not contain the video tag initially, the canvas is not created afterwards.
- > **Solution**: Open videos on a new tab, or simply refresh it.
+ > **Solution**: Open video on a new tab, or simply refresh it.
 - When the video tag is removed from the webpage, the canvas does not disappear.
  > **Solution**: refresh the page, or try opening it in a new tab.
  
@@ -33,7 +33,7 @@ It's recommended to use the highest resolution possible for now.
 #### Alt+Ctrl
 ![Paste recognized text](./p2.gif)
 
-Figure 1 video: [_Three Runners Puzzle_](https://www.youtube.com/watch?v=C6emQS14Tbk) is from YouTube channel: [**MindYourDecisions**](https://www.youtube.com/channel/UCHnj59g7jezwTy5GeL8EA_g).
+First clip is from the video: [_Three Runners Puzzle_](https://www.youtube.com/watch?v=C6emQS14Tbk). YouTube channel: [**MindYourDecisions**](https://www.youtube.com/channel/UCHnj59g7jezwTy5GeL8EA_g).
 
 ### Installation
 - Go to: chrome://extensions/
@@ -49,10 +49,16 @@ Figure 1 video: [_Three Runners Puzzle_](https://www.youtube.com/watch?v=C6emQS1
    Similarly, if you get back to main youtube page from a video page, the app would still continue to run. (same cause, same solution). 
    
   - It does not fully work on fullscreen, or when you Enable/Disable Theater mode on YouTube without refreshing the page.
-  
+
+##### Potential solution
+  A nice workaround would be to use a keypress to initialise the function, then while the key is down, drag the cursor to select, and recognize when the key is up again. It would feel more natural and solve most of the problems.
+ 
+ 
 ##### Next step:
     - Fix those problems
     - dynamically change the canvas size according to the video without refreshing
     - train the model on more fonts and styles
     
-This project is using tesseract.js version from https://github.com/naptha/tesseract.js
+
+
+This project is using tesseract.js version from https://github.com/naptha/tesseract.js  
