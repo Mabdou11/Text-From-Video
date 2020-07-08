@@ -13,7 +13,7 @@ In theory, it should work on any webpage that contains a <video> tag.
  
   
 The recognized text should be automatically copied to clipboard
->If that doesn't work, simply try it again, I ignore why it fails sometimes.
+>If that doesn't work, try clicking first on a blank space on the web page.
 
 For now, it is not trained on any additional data
 If it's clear and a wellknown font, it would recognize it without problems
@@ -26,7 +26,7 @@ It's recommended to use the highest resolution possible for now.
  - Select the desired portion of the video, press and hold the mouse button, and drag over the text until you cover the whole section.
  - Press Alt + Ctrl to start the recognition (this is temporary)
  - Wait a little, until the recognised text gets shown to the right side of the cursor.
- - It should to automatically copied to the clipboard (do it again if it is not).
+ - It should be automatically copied to the clipboard (do it again if it is not).
  - Hit directly Alt + Ctrl on a freshly loaded page to recognize the entire video frame (takes time, not recommended).
 
 ![Select text area](./p1.gif)
